@@ -15,7 +15,11 @@ abstract: >-
 authors:
   - family-names: Vajda
     given-names: Simon
+    affiliation: Deakin University
+    orcid: "https://orcid.org/0000-0002-2751-4816"
 license: MIT
+version: 0.1.0
+date-released: "2026-10-07"
 repository-code: "https://github.com/Rainierraoul/ooda-harness"
 keywords:
   - agent harness
