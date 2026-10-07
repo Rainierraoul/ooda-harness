@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "parent": null,
+  "note": "Hand-written starting point.",
+  "fusion": {
+    "decay": 0.6,
+    "jevWeight": 1.0,
+    "confusionEntropy": 0.85
+  },
+  "cynefin": {
+    "instructions": "Which Cynefin domain best describes this task as it stands now, given the evidence so far?",
+    "criteria": {
+      "clear": "Cause and effect are obvious. A known, standard procedure solves it.",
+      "complicated": "Cause and effect can be worked out by analysis or expertise. Several good answers may exist.",
+      "complex": "Cause and effect are only clear in hindsight. The way forward has to be found by trying small, safe experiments.",
+      "chaotic": "Something is actively going wrong and needs to be stabilised first. There is no time to analyse.",
+      "confused": "It is not clear which of the other descriptions applies, or the task mixes several of them."
+    }
+  },
+  "strategies": {
+    "clear": {
+      "thinking": "minimal",
+      "riskThreshold": 0.8,
+      "prompt": "This task is routine. Apply the standard approach directly. Do not explore alternatives. Stop as soon as the acceptance criteria are met."
+    },
+    "complicated": {
+      "thinking": "high",
+      "riskThreshold": 0.7,
+      "prompt": "This task needs analysis. Before changing anything, read what you need and write a short plan that names how each acceptance criterion will be checked. Then carry out the plan and check each criterion."
+    },
+    "complex": {
+      "thinking": "medium",
+      "riskThreshold": 0.4,
+      "prompt": "The way forward is not knowable in advance. Make one small, reversible change at a time, observe the result, and keep what works. Prefer actions you can undo. Report what each experiment showed."
+    },
+    "chaotic": {
+      "thinking": "low",
+      "riskThreshold": 0.3,
+      "prompt": "Something is going wrong. First take the smallest action that stops further damage, then report the state you observe. Do not attempt a full fix until the situation is stable."
+    },
+    "confused": {
+      "thinking": "medium",
+      "riskThreshold": 0.3,
+      "prompt": "It is unclear what kind of task this is. Do not change anything yet. Split the task into parts, say which parts are routine and which are uncertain, and state what information would settle it."
+    }
+  },
+  "gates": {
+    "doneThreshold": 0.8,
+    "maxRuns": 4,
+    "riskInstructions": "Would carrying out this tool call delete data, overwrite work that cannot be recovered, or affect anything outside the task's working directory?",
+    "criterionInstructions": "Based only on the evidence in the state, is this acceptance criterion met?"
+  }
+}

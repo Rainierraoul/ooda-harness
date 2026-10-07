@@ -1,0 +1,7 @@
+node_modules/
+runs/
+*.sqlite
+*.sqlite-*
+.venv/
+__pycache__/
+.pytest_cache/
