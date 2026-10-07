@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "ooda-harness: a durable OODA-loop agent harness with Jev and a small vLLM-served model"
+abstract: >-
+  An agent harness that works through a task in repeated cycles of observe,
+  orient, decide and act. A small chat model served by vLLM does the work with
+  file and shell tools. Jev, a decision model that returns calibrated
+  probabilities for typed questions, classifies the task's Cynefin domain,
+  judges acceptance criteria and screens tool calls. Its answers are fused over
+  time. Every step is committed to storage through pi-durable, so interrupted
+  work resumes where it stopped. A separate loop changes the harness settings
+  one at a time and keeps a change only when a task suite's objective checks
+  favour it.
+authors:
+  - family-names: Vajda
+    given-names: Simon
+license: MIT
+repository-code: "https://github.com/Rainierraoul/ooda-harness"
+keywords:
+  - agent harness
+  - OODA loop
+  - Cynefin
+  - information fusion
+  - durable execution
+  - small language models
+  - vLLM
+  - self-improving agents
